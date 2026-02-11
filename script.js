@@ -1,12 +1,13 @@
-﻿const I18N = {
+const I18N = {
   en: {
+    "nav.language": "Language",
     "nav.contact": "Contact",
     "hero.title": "Software, built with care.",
     "hero.subtitle": "ASTechno is the trading name of AS Technology V.O.F. in the Netherlands. We build reliable software products with care and long-term intent.",
     "hero.ctaPrimary": "Email us",
     "hero.ctaSecondary": "What we're building",
     "building.title": "What we're building",
-    "building.body1": "ASTechno is developing its first product internally. We’re currently focused on designing, validating, and building an MVP.",
+    "building.body1": "ASTechno is developing its first product internally. We're currently focused on designing, validating, and building an MVP.",
     "building.note": "More details will be shared as the product matures.",
     "company.title": "Company",
     "company.legal": "Legal name:",
@@ -18,6 +19,7 @@
     "footer.copyright": "© AS Technology V.O.F."
   },
   nl: {
+    "nav.language": "Taal",
     "nav.contact": "Contact",
     "hero.title": "Software, met zorg gebouwd.",
     "hero.subtitle": "ASTechno is de handelsnaam van AS Technology V.O.F. in Nederland. We bouwen betrouwbare softwareproducten met aandacht en met een langetermijnvisie.",
@@ -36,6 +38,7 @@
     "footer.copyright": "© AS Technology V.O.F."
   },
   ar: {
+    "nav.language": "اللغة",
     "nav.contact": "تواصل",
     "hero.title": "برمجيات تُبنى بعناية.",
     "hero.subtitle": "ASTechno هو الاسم التجاري لشركة AS Technology V.O.F. في هولندا. نبني منتجات برمجية موثوقة بعناية وبرؤية طويلة المدى.",
@@ -51,6 +54,25 @@
     "company.kvk": "رقم السجل التجاري (KvK):",
     "company.vat": "رقم ضريبة القيمة المضافة:",
     "company.contact": "التواصل:",
+    "footer.copyright": "© AS Technology V.O.F."
+  },
+  de: {
+    "nav.language": "Sprache",
+    "nav.contact": "Kontakt",
+    "hero.title": "Software, mit Sorgfalt entwickelt.",
+    "hero.subtitle": "ASTechno ist der Handelsname von AS Technology V.O.F. in den Niederlanden. Wir entwickeln zuverlaessige Softwareprodukte mit Sorgfalt und langfristiger Ausrichtung.",
+    "hero.ctaPrimary": "E-Mail senden",
+    "hero.ctaSecondary": "Woran wir arbeiten",
+    "building.title": "Woran wir arbeiten",
+    "building.body1": "ASTechno entwickelt intern sein erstes Produkt. Derzeit konzentrieren wir uns auf Konzeption, Validierung und den Aufbau eines MVP.",
+    "building.note": "Weitere Details folgen, sobald das Produkt weiter gereift ist.",
+    "company.title": "Unternehmen",
+    "company.legal": "Juristischer Name:",
+    "company.trading": "Handelsname:",
+    "company.founders": "Gruender:",
+    "company.kvk": "KvK-Nummer:",
+    "company.vat": "USt-IdNr. (VAT-ID):",
+    "company.contact": "Kontakt:",
     "footer.copyright": "© AS Technology V.O.F."
   }
 };
