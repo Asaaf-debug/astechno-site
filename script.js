@@ -15,8 +15,7 @@
     "company.kvk": "Chamber of Commerce (KvK):",
     "company.vat": "VAT (BTW):",
     "company.contact": "Contact:",
-    "footer.copyright": "© AS Technology V.O.F.",
-    "footer.meta": "KvK 99714922 · VAT NL869102801B01"
+    "footer.copyright": "© AS Technology V.O.F."
   },
   nl: {
     "nav.contact": "Contact",
@@ -34,8 +33,7 @@
     "company.kvk": "KvK-nummer:",
     "company.vat": "BTW-id:",
     "company.contact": "Contact:",
-    "footer.copyright": "© AS Technology V.O.F.",
-    "footer.meta": "KvK 99714922 · BTW NL869102801B01"
+    "footer.copyright": "© AS Technology V.O.F."
   },
   ar: {
     "nav.contact": "تواصل",
@@ -53,8 +51,7 @@
     "company.kvk": "رقم السجل التجاري (KvK):",
     "company.vat": "رقم ضريبة القيمة المضافة:",
     "company.contact": "التواصل:",
-    "footer.copyright": "© AS Technology V.O.F.",
-    "footer.meta": "KvK 99714922 · ضريبة NL869102801B01"
+    "footer.copyright": "© AS Technology V.O.F."
   }
 };
 

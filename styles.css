@@ -144,11 +144,6 @@ a{color:inherit}
   background:rgba(0,0,0,.2);
 }
 .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.foot-meta{
-  width:100%;
-  color:var(--muted);
-  font-size:.92rem;
-}
 @media (max-width:900px){
   .hero h1{font-size:30px}
   .brand-logo{
