@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASTechno | AS Technology V.O.F.</title>
+  <meta name="description" content="ASTechno (AS Technology V.O.F.) builds reliable software and digital solutions." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="wrap">
+    <nav class="nav">
+      <a class="brand" href="/" aria-label="ASTechno home">
+        <img
+          class="brand-logo"
+          src="logo-nav.png"
+          alt="ASTechno logo"
+          onerror="this.style.display='none';"
+        />
+      </a>
+      <div class="nav-actions">
+        <div class="lang-switch" aria-label="Language switcher">
+          <span class="lang-label">Language</span>
+          <div class="lang-options" role="group" aria-label="Select language">
+            <button class="lang-btn" type="button" data-lang="en" aria-label="English" title="English">EN</button>
+            <button class="lang-btn" type="button" data-lang="nl" aria-label="Nederlands" title="Nederlands">NL</button>
+            <button class="lang-btn" type="button" data-lang="ar" aria-label="العربية" title="العربية">AR</button>
+          </div>
+        </div>
+        <a class="btn" href="#company" data-i18n="nav.contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1 data-i18n="hero.title">Software, built with care.</h1>
+      <p data-i18n="hero.subtitle">ASTechno is the trading name of AS Technology V.O.F. in the Netherlands. We build reliable software products with care and long-term intent.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:contact@astechno.dev" data-i18n="hero.ctaPrimary">Email us</a>
+        <a class="btn ghost" href="#building" data-i18n="hero.ctaSecondary">What we're building</a>
+      </div>
+    </section>
+  </header>
+
+  <main class="wrap">
+    <section id="building" class="card building">
+      <h2 data-i18n="building.title">What we're building</h2>
+      <p data-i18n="building.body1">ASTechno is developing its first product internally. We're currently focused on designing, validating, and building an MVP.</p>
+      <p class="building-note" data-i18n="building.note">More details will be shared as the product matures.</p>
+    </section>
+
+    <section id="company" class="card legal">
+      <h2 data-i18n="company.title">Company</h2>
+      <p><strong data-i18n="company.legal">Legal name:</strong> AS Technology V.O.F.</p>
+      <p><strong data-i18n="company.trading">Trading name:</strong> ASTechno</p>
+      <p><strong data-i18n="company.founders">Founders:</strong> Asaad Haidar, Somar Asaad</p>
+      <p><strong data-i18n="company.kvk">Chamber of Commerce (KvK):</strong> 99714922</p>
+      <p><strong data-i18n="company.vat">VAT (BTW):</strong> NL869102801B01</p>
+      <p><strong data-i18n="company.contact">Contact:</strong> <a href="mailto:contact@astechno.dev">contact@astechno.dev</a></p>
+      <!-- Optional later:
+      <p><strong>KVK:</strong> XXXXXXXX</p>
+      <p><strong>VAT:</strong> NLXXXXXXXXXBXX</p>
+      -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <div data-i18n="footer.copyright">&copy; AS Technology V.O.F.</div>
+      <div><a href="mailto:contact@astechno.dev">contact@astechno.dev</a></div>
+      <div class="foot-meta" data-i18n="footer.meta">KvK 99714922 · VAT NL869102801B01</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
