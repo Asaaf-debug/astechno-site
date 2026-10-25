@@ -1,0 +1,9 @@
+{
+  "name": "astechno-site",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "check": "node tools/build.mjs --check",
+    "test": "node --test tests/site.test.mjs"
+  }
+}

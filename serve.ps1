@@ -65,10 +65,21 @@ try {
 
     $candidate = [System.IO.Path]::GetFullPath((Join-Path $rootFull $requestPath))
 
-    if (-not $candidate.StartsWith($rootFull, [System.StringComparison]::OrdinalIgnoreCase)) {
+    $rootPrefix = $rootFull.TrimEnd([System.IO.Path]::DirectorySeparatorChar) + [System.IO.Path]::DirectorySeparatorChar
+    if (-not $candidate.StartsWith($rootPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
       $context.Response.StatusCode = 403
       $context.Response.Close()
       continue
+    }
+
+    if (Test-Path -LiteralPath $candidate -PathType Container) {
+      if (-not $context.Request.Url.AbsolutePath.EndsWith("/")) {
+        $context.Response.StatusCode = 301
+        $context.Response.RedirectLocation = $context.Request.Url.AbsolutePath + "/" + $context.Request.Url.Query
+        $context.Response.Close()
+        continue
+      }
+      $candidate = Join-Path $candidate "index.html"
     }
 
     if (Test-Path -LiteralPath $candidate -PathType Leaf) {
