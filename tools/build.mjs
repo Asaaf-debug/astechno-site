@@ -8,7 +8,7 @@ export const languages = Object.keys(translations);
 export const pagePath = (lang) =>
   lang === "en" ? "index.html" : `${lang}/index.html`;
 export const pageUrl = (lang) =>
-  `https://astechno.dev/${lang === "en" ? "" : `${lang}/`}`;
+  `https://www.astechno.dev/${lang === "en" ? "" : `${lang}/`}`;
 const escapeHtml = (value) =>
   value.replace(
     /[&<>"']/g,
@@ -57,11 +57,11 @@ export async function renderPage(lang) {
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "https://astechno.dev/#organization",
+          "@id": "https://www.astechno.dev/#organization",
           name: "ASTechno",
           legalName: "AS Technology V.O.F.",
-          url: "https://astechno.dev/",
-          logo: "https://astechno.dev/logo-nav.png",
+          url: "https://www.astechno.dev/",
+          logo: "https://www.astechno.dev/logo-nav.png",
           email: "contact@astechno.dev",
           vatID: "NL869102801B01",
           identifier: {
@@ -77,7 +77,7 @@ export async function renderPage(lang) {
           name: dict["meta.title"],
           description: dict["meta.description"],
           inLanguage: lang,
-          about: { "@id": "https://astechno.dev/#organization" },
+          about: { "@id": "https://www.astechno.dev/#organization" },
         },
       ],
     }).replace(/</g, "\\u003c"),
@@ -115,7 +115,7 @@ async function build() {
   const urls = languages
     .map(
       (lang) =>
-        `  <url><loc>${pageUrl(lang)}</loc>${languages.map((alternate) => `<xhtml:link rel="alternate" hreflang="${alternate}" href="${pageUrl(alternate)}" />`).join("")}<xhtml:link rel="alternate" hreflang="x-default" href="https://astechno.dev/" /></url>`,
+        `  <url><loc>${pageUrl(lang)}</loc>${languages.map((alternate) => `<xhtml:link rel="alternate" hreflang="${alternate}" href="${pageUrl(alternate)}" />`).join("")}<xhtml:link rel="alternate" hreflang="x-default" href="https://www.astechno.dev/" /></url>`,
     )
     .join("\n");
   await putFile(
@@ -125,7 +125,7 @@ async function build() {
   );
   await putFile(
     "robots.txt",
-    "User-agent: *\nAllow: /\nSitemap: https://astechno.dev/sitemap.xml\n",
+    "User-agent: *\nAllow: /\nSitemap: https://www.astechno.dev/sitemap.xml\n",
     check,
   );
   if (!check) {

@@ -90,11 +90,13 @@ The Netherlands Enterprise Agency's [business correspondence guidance](https://b
 
 ## Release setup and handoff
 
-The inspected source was the clean `C:\Site` repository, remote `https://github.com/Asaaf-debug/astechno-site.git`, at `30ea735ea39ebb905cc5f0f517ce1355e021b807`. Its local and remote `main` matched when inspected. Work is isolated on `codex/astechno-redesign`; the original checkout and the Decisphere app/backend repositories were not modified.
+The inspected source was the clean `C:\Site` repository, remote `https://github.com/Asaaf-debug/astechno-site.git`, at `30ea735ea39ebb905cc5f0f517ce1355e021b807`. Its local and remote `main` matched when inspected. The approved design was saved in commit `472cbe1` on `codex/astechno-redesign` and applied to the original clean checkout on that local branch. The Decisphere app/backend repositories were not modified.
 
-No deployment workflow, hosting manifest, or domain configuration is present in the repository. The public GitHub metadata reported `has_pages: false`. The production domain could not be resolved from the inspection environment, so live parity and hosting behavior could not be verified. The owner must confirm the actual hosting provider, intended release branch/process, and production approval before any push or deployment.
+Hosting was subsequently confirmed as Cloudflare Pages project `astechno-site`, connected to the GitHub repository. A successful Cloudflare check exists on the previous `main` commit; GitHub Pages is disabled. The owner has explicitly authorized publishing the approved design. The Cloudflare dashboard confirms production branch `main` with automatic deployments enabled. Its build configuration is `node tools/build.mjs`, output directory `dist/`, framework None and repository root unchanged.
 
-The generated pages are checked in at the repository root to remain compatible with simple static hosting. Prefer publishing only the contents of `dist/` when the release workflow is confirmed. The host needs ordinary directory index handling for `/nl/`, `/ar/`, and `/de/`, and should redirect their slashless forms to the trailing-slash URL. No SPA fallback is needed. Do not upload source, tests, or local QA evidence as part of a `dist/` release.
+The generated pages are checked in at the repository root to remain compatible with simple static hosting. Cloudflare should publish only the contents of `dist/`. The host needs ordinary directory index handling for `/nl/`, `/ar/`, and `/de/`, and should redirect their slashless forms to the trailing-slash URL. No SPA fallback is needed. Do not upload source, tests, or local QA evidence as part of a `dist/` release.
+
+The public canonical origin is `https://www.astechno.dev`. Canonical/hreflang links, social image URLs, structured data, robots and the sitemap use this origin. Squarespace manages the domain and now has a permanent root-domain forwarding rule to `www.astechno.dev`, with path forwarding enabled. Root-domain DNS records have been created; HTTPS activation was still pending at the last domain check. Existing email/service records and the `www` Cloudflare CNAME were preserved.
 
 ## Exact redesign file list
 

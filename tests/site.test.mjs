@@ -39,6 +39,8 @@ for (const lang of languages) {
     assert.ok(html.includes(translations[lang]["hero.line1"]));
     assert.ok(html.includes(translations[lang]["teaser.soon"]));
     assert.ok(html.includes(`<link rel="canonical" href="${pageUrl(lang)}"`));
+    assert.equal(new URL(pageUrl(lang)).hostname, "www.astechno.dev");
+    assert.doesNotMatch(html, /https:\/\/astechno\.dev\//);
     assert.equal([...html.matchAll(/aria-current="page"/g)].length, 1);
     assert.ok(html.includes(`data-lang="${lang}"`));
     for (const alternate of languages)
